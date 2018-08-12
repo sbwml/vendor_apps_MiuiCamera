@@ -106,10 +106,8 @@
     <bool name="support_device_encrypt">true</bool>
     <!--whether support burst shoot in camera-->
     <bool name="support_camera_burst_shoot">true</bool>
-    <!--whether support burst shoot denoise in camera-->
-    <bool name="support_camera_burst_shoot_denoise">true</bool>
     <!--whether support solid recording in camera-->
-    <bool name="support_camera_movie_solid">false</bool>
+    <bool name="support_camera_movie_solid">true</bool>
     <!--whether support shader effect in camera-->
     <bool name="support_camera_shader_effect">true</bool>
     <!--whether support skin beauty in camera-->
@@ -139,17 +137,17 @@
     <!--whether taking full size effect image in camera-->
     <bool name="is_full_size_effect">true</bool>
     <!--whether support aohdr in camera-->
-    <bool name="support_camera_aohdr">false</bool>
+    <bool name="support_camera_aohdr">true</bool>
     <!--whether support high frame recording in camera-->
     <bool name="support_camera_hfr">true</bool>
     <!--whether support chroma flash in camera-->
     <bool name="support_chroma_flash">false</bool>
     <!--whether support object tracking in camera-->
-    <bool name="support_object_track">false</bool>
+    <bool name="support_object_track">true</bool>
     <!--whether support 4k recording in camera-->
     <bool name="support_camera_4k_quality">true</bool>
     <!--whether support audio focus recording in camera-->
-    <bool name="support_camera_audio_focus">false</bool>
+    <bool name="support_camera_audio_focus">true</bool>
     <!--whether use morpho lib in camera-->
     <bool name="is_camera_use_morpho_lib">true</bool>
     <!--whether replace a lower cost effect to avoid preview lag-->
@@ -157,7 +155,7 @@
     <!--whether support manual focus/exposure_time in camera-->
     <bool name="support_camera_manual_function">true</bool>
     <!--whether capture when user press down the shutter in camera instead of left the shutter-->
-    <bool name="support_camera_press_down_capture">true</bool>
+    <bool name="support_camera_press_down_capture">false</bool>
     <!--whether support capture in torch mode in camera-->
     <bool name="support_camera_torch_capture">false</bool>
     <!--whether freeze preview after hdr capture in camera-->
@@ -168,8 +166,6 @@
     <bool name="is_camera_hold_blur_background">true</bool>
     <!--whether support peaking mf in camera-->
     <bool name="support_camera_peaking_mf">true</bool>
-    <!--whether support pause in hfr recording-->
-    <bool name="support_hfr_video_pause">false</bool>
     <!--whether support gradienter in camera-->
     <bool name="support_camera_gradienter">true</bool>
     <!--whether scan qrcode with lower frequency in camera-->
@@ -191,15 +187,11 @@
     <!-- whether support double tap to wake up device -->
     <bool name="support_gesture_wakeup">true</bool>
     <!-- whether support edge handgrip -->
-    <bool name="support_edge_handgrip">false</bool>
+    <bool name="support_edge_handgrip">true</bool>
     <!--wheater support validate device when syste upadte -->
     <bool name="support_ota_validate">true</bool>
     <!--whether show my device-->
-    <bool name="support_my_device">true</bool>
-    <!--battery capacity typ of the device-->
-    <string name="battery_capacity_typ">3080</string>
-    <!--whether show basic info items-->
-    <bool name="support_show_basic_items">true</bool>
+    <bool name="support_my_device">false</bool>
     <!--wheater support show credentials-->
     <bool name="support_credentials">true</bool>
     <!--the vendor feature, it's value may be qcom,mediatek,leadcore or nvidia-->
@@ -215,7 +207,7 @@
     <!--max number of burst images one time -->
     <integer name="burst_shoot_count">100</integer>
     <!--whether rotate the final image in camera isp-->
-    <bool name="is_camera_isp_rotated">false</bool>
+    <bool name="is_camera_isp_rotated">true</bool>
     <!--max cpu freq of the device-->
     <integer name="cpu_max_freq">215</integer>
     <!--Successful flag of camera continuous auto focus  result-->
@@ -241,8 +233,6 @@
         <item>gf3208</item>
     </string-array>
     <bool name="support_tap_fingerprint_sensor_to_home">false</bool>
-    <!-- type of soter finger pay, config by owner of soter -->
-    <integer name="type_soter_finger_pay">2</integer>
     <!--NFC related-->
     <bool name="support_se_route">true</bool>
     <!--wheater the device supports persist screen color in driver-->
@@ -266,17 +256,51 @@
     <!--min previewsize value for video call case-->
     <integer name="extra_min_preview_size">921600</integer>
     <!-- Support Sign Verify In Cust Partition-->
-    <bool name="support_sign_verify_in_cust">false</bool>
+    <bool name="support_sign_verify_in_cust">true</bool>
     <!-- boost gpu freq to make up sampling latency, used on msm8953 only -->
     <bool name="boost_gpu">true</bool>
-    <bool name="support_audio_loopback">true</bool>
-    <bool name="support_new_silentmode">true</bool>
-    <!-- whether CN hardware can flash Global rom -->
-    <bool name="enable_flash_global">true</bool>
-    <!--whether support tele asd night in camera-->
-    <bool name="is_support_tele_asd_night">true</bool>
-    <!--whether support optical zoom in camera-->
-    <bool name="is_support_optical_zoom">true</bool>
     <!--whether support portrait in camera-->
     <bool name="is_support_portrait">true</bool>
+    <!--whether camera support portrait mode switch -->
+    <bool name="camera_is_support_portrait_switch">true</bool>
+    <!-- whether camera support AI lens entry -->
+    <bool name="camera_support_ai_lens">true</bool>
+    <!--whether taking legacy face beauty in camera-->
+    <bool name="is_legacy_face_beauty">false</bool>
+    <!--whether front camera support hdr or not-->
+    <bool name="support_front_hdr">true</bool>
+    <!-- Camera HDR default value -->
+    <integer name="support_camera_hdr_default_value">3</integer>
+    <integer name="support_camera_front_hdr_default_value">3</integer>
+　　<!--whether front camera support hht or not-->
+    <bool name="support_front_hht">true</bool>
+    <!--whether front camera support bokeh or not-->
+　  <bool name="support_front_bokeh">true</bool>
+    <!--whether support auto mirror in camera-->
+    <bool name="support_auto_mirror">false</bool>
+    <!--whether support auto mirror in camera-->
+    <bool name="enhance_beauty_with_hht">true</bool>
+    <!--whether support add watermark on bottom left of picture-->
+    <bool name="support_picture_watermark">true</bool>
+    <!--whether need video stabilizatiion crop-->
+    <bool name="disable_video_stabilization_in_speed_slow_mode">true</bool>
+    <!--whether add algorithm in file name or not-->
+    <bool name="enable_algorithm_in_file_suffix">false</bool>
+    <!--whether need video stabilizatiion crop-->
+    <bool name="need_video_stabilization_crop">true</bool>
+    <!--whether sensor_has_latency-->
+    <bool name="sensor_has_latency">true</bool>
+    <!-- whether camera supports paralell process -->
+    <bool name="support_parallel_process">true</bool>
+    <!--whether enable face detection in video and funmode or not-->
+    <bool name="support_camera_video_face_detection">true</bool>
+    <!--camera max quality which support high frame rate,1:480 2:720 3:1080-->
+    <integer name="support_camera_hfr_max_quality">3</integer>
+   <!--whether taking 18x9 ratio screen in camera-->
+   <bool name="is_18x9_ratio_screen">true</bool>
+   <bool name="camera_support_ai_lens">true</bool>
+   <bool name="camera_supported_ai_scene">true</bool>
+   <!--whether support tele asd night in camera-->
+   <bool name="is_support_tele_asd_night">true</bool>
+   <bool name="is_support_optical_zoom">true</bool>
 </features>
